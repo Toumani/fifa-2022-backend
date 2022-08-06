@@ -9,3 +9,13 @@ datasource db {
   provider = "postgresql"
   url      = env("DATABASE_URL")
 }
+
+model player {
+  id         Int    @default(autoincrement()) @id
+  firstname  String
+  lastname   String
+  goal       Int
+  salary     Int
+  devise     String
+  pictureURl String @unique
+}
